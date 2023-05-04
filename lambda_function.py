@@ -49,13 +49,6 @@ def lambda_handler(event, context):
         array_of_rows_to_return.append(row_to_return)
 
     json_compatible_string_to_return = json.dumps({"data" : array_of_rows_to_return})
-    
-    # try:
-    # except Exception as err:
-    #     # 400 implies some type of error.
-    #     status_code = 400
-    #     # Tell caller what this function could not handle.
-    #     json_compatible_string_to_return = event_body
 
     # Return the return value and HTTP status code.
     return {
